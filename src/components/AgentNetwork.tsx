@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import AgentNode from "./AgentNode";
 import ConnectionLine from "./ConnectionLine";
@@ -137,17 +136,14 @@ const AgentNetwork = () => {
         />
       ))}
 
-      {/* Diagram title */}
+      {/* Diagram title - Keeping only the subtitle and removing the h1 */}
       <div 
         className={`absolute top-5 left-1/2 transform -translate-x-1/2 text-center transition-opacity duration-700 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
         style={{ transitionDelay: '200ms' }}
       >
-        <div className="text-xs font-medium text-neon-green/60 uppercase tracking-widest mb-1">
+        <div className="text-xs font-medium text-neon-green/60 uppercase tracking-widest">
           Advanced System Architecture
         </div>
-        <h1 className="text-2xl font-light text-white/90 tracking-wide">
-          Neon Orchestrator <span className="text-neon-green font-normal">Network</span>
-        </h1>
       </div>
     </div>
   );
