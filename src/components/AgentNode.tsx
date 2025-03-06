@@ -49,7 +49,7 @@ const AgentNode = ({
         left: x - (isMain ? 128 : 112),
         top: y - (isMain ? 96 : 88),
         opacity: 0,
-        z-index: 10,
+        zIndex: 10,
       }}
       animate={{
         opacity: isVisible ? 1 : 0,
