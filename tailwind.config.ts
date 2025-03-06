@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				neon: {
+					green: '#39FF14',
+					blue: '#00F0FF',
+					purple: '#7B68EE',
+				},
+				diagram: {
+					dark: '#0A0F16',
+					darker: '#050A11',
+					card: 'rgba(20, 28, 36, 0.6)',
 				}
 			},
 			borderRadius: {
@@ -70,25 +81,67 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'pulse-neon': {
+					'0%, 100%': { 
+						opacity: '1',
+						filter: 'brightness(1) blur(0px)'
 					},
-					to: {
-						height: '0'
+					'50%': { 
+						opacity: '0.7',
+						filter: 'brightness(1.2) blur(1px)'
+					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'particle-flow': {
+					'0%': { 
+						transform: 'translateY(0) scale(0.5)',
+						opacity: '0'
+					},
+					'50%': { 
+						opacity: '1'
+					},
+					'100%': { 
+						transform: 'translateY(-100%) scale(1)',
+						opacity: '0'
+					}
+				},
+				'fade-in': {
+					'0%': { 
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': { 
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'draw-line': {
+					'0%': { 
+						'stroke-dashoffset': '1000'
+					},
+					'100%': { 
+						'stroke-dashoffset': '0'
 					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-neon': 'pulse-neon 2s infinite ease-in-out',
+				'float': 'float 6s infinite ease-in-out',
+				'particle-flow': 'particle-flow 4s infinite ease-out',
+				'fade-in': 'fade-in 0.8s ease-out forwards',
+				'draw-line': 'draw-line 2s ease-out forwards'
 			}
 		}
 	},
