@@ -3,7 +3,7 @@ import AgentNetwork from "../components/AgentNetwork";
 
 const Index = () => {
   return (
-    <div className="min-h-screen w-full">
+    <div className="h-screen w-full overflow-hidden">
       <AgentNetwork />
     </div>
   );
